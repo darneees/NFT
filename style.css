@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --text: #f3f3f3;
+    --text2: #828282;
+    --background: #181818;
+    --nft: #8338ec;
+}
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    justify-content: space-around;
+}
+.nav-logo {
+    pointer-events: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.nav-logo::first-letter {
+    color: var(--nft);
+}
+.nav-login span {
+    border: 1px solid var(--text);
+    margin-left: 10px;
+    opacity: 0.6;
+    rotate: 17deg;
+}
+.nav-menu , .nav-login {
+    list-style: none;
+    display: flex;
+}
+.nav-menu li , .nav-login li {
+    margin-left: 10px;
+}
+.nav-menu li:nth-child(1) , .nav-login li:nth-child(1) {
+    margin-left: 0;
+}
+.nav-menu a , .nav-login a {
+    text-decoration: none;
+    color: var(--text);
+    opacity: 0.6;
+}
+.nav-menu a:hover , .nav-login a:hover {
+    opacity: 1;
+    color: var(--nft);
+
+}
+.nav-login .active {
+    padding: 10px 10px;
+    border-radius: 20px;
+    opacity: 1;
+    background-color: var(--nft);
+    letter-spacing: 1px;
+}
+.nav-login .active:hover {
+    background-color: var(--text);
+    color: var(--nft);
+}
+/* SECTION */
+.section-container {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.container-text {
+    width: 400px;
+}
+.container-text h1 {
+    font-size: 3.5rem;
+}
+.container-text h2 {
+    display: none;
+}
+.container-text .prgf {
+    color: var(--text2);
+}
+.container-text span {
+    color: var(--nft);
+    font-size: 3.8rem;
+}
+.container-img img {
+    border: 10px solid var(--nft);
+}
+/* MOBILE */
+.menu-mobile {
+    background: var(--text);
+    position: absolute;
+    left: 0;
+    top: 95px;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    visibility: hidden;
+    transition: 0.1s;
+    overflow: hidden;
+  }
+  .menu-mobile li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .menu-mobile a {
+    width: 100%;
+    height: 100%;
+    letter-spacing: 2px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--nft);
+    padding: 30px;
+  }
+  .menu-mobile a:hover {
+    background-color: var(--background);
+    color: var(--text);
+  }
+  #btn-menu {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: transparent;
+    display: none;
+  }
+  .line {
+    background-color: var(--nft);
+    width: 35px;
+    height: 4px;
+    display: block;
+    margin: 8px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.3s;
+  }
+/* MENU MOBILE - ANIMATION */
+.antButon {
+    cursor: pointer;
+  }
+  .antButon.activation .line:nth-child(1) {
+    transform: translateY(16px) rotate(-50deg);
+    background-color: var(--nft);
+    width: 40px;
+  }
+  .antButon.activation .line:nth-child(2) {
+    width: 0;
+  }
+  .antButon.activation .line:nth-child(3) {
+    transform: translateY(-7px) rotate(50deg);
+    background-color: var(--nft);
+    width: 40px;
+  }
+/* RESPONSIVE */
+
+@media screen and (max-width:850px)  {
+    .header-nav {
+        display: flex;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .nav-login {
+        display: none;
+    }
+    .nav-logo {
+        font-size: 2rem;
+    }
+    .menu-mobile.opened{
+        visibility: visible;
+        height: calc(100vh - 95px);
+    }
+    #btn-menu {
+        display: block;
+    }
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+        text-align: center;
+    }
+    .container-text .prgf {
+        display: none;
+    }
+    .container-text h1 {
+        display: none;
+    }
+    .container-text h2 {
+        display: block;
+    }
+    .container-text span {
+        color: var(--nft);
+        font-size: 5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
