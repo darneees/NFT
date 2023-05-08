@@ -15,7 +15,7 @@
 
 ## Deployed
 
-https://darneees.github.io/PFTs/
+https://darneees.github.io/NFT/
 
 <h3 align="center">
 
